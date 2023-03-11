@@ -1,4 +1,98 @@
 *{
     font-family: 'Courier New', Courier, monospace;
     color:black;
+    text-align: center;
+}
+img{
+    border-radius: 0.5rem;
+    width: 20.25rem;
+    height:20.25rem;
+    cursor: pointer;
+}
+hr{
+    width: 25%;
+}
+.accordion{
+    list-style:none;
+    margin: 0;
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
+.accordion_trigger {
+    display: block;
+    background-color: lightslategray;
+    color: #ddd;
+    font-weight: normal;
+    cursor: pointer;
+    padding: 1.2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 32rem
+    }
+.accordion_toggle:checked ~ .accordion_trigger {
+    background-color: black;
+}
+.accordion_toggle {
+    position: absolute;
+    display: none;
+  }
+  .accordion_target {
+    border: 0;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  .accordion_toggle:checked ~ .accordion_target {
+    position: static;
+    overflow: visible;
+    clip: auto;
+    margin: auto;
+    padding: 1.2rem;
+    width: auto;
+    height: auto;
+    /* задержка появления  функция анимации */
+    -webkit-animation:fadeIn ease-in 0.5s; 
+    -moz-animation:fadeIn ease-in 0.5s;
+    animation:fadeIn ease-in 0.5s;
+  }
+    @-moz-keyframes fadeIn {
+        from { opacity: 0; }
+    to { opacity: 1 }
+    }
+    @-webkit-keyframes fadeIn {
+        from { opacity: 0; }
+    to { opacity: 1 }
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+    to { opacity: 1 }
+}
+.accordion_trigger:hover ~ .accordion_target{
+    position: static;
+    overflow: visible;
+    clip: auto;
+    margin: auto;
+    padding: 1.2rem;
+    width: auto;
+    height: auto;
+    /* задержка появления  функция анимации */
+    -webkit-animation:fadeIn ease-in 0.5s; 
+    -moz-animation:fadeIn ease-in 0.5s;
+    animation:fadeIn ease-in 0.5s;
+  }
+    @-moz-keyframes fadeIn {
+        from { opacity: 0; }
+    to { opacity: 1 }
+    }
+    @-webkit-keyframes fadeIn {
+        from { opacity: 0; }
+    to { opacity: 1 }
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+    to { opacity: 1 }
+}
 }
