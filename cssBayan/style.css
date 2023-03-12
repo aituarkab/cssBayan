@@ -1,0 +1,151 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    color:black;
+    text-align: center;
+}
+
+img{
+    border-radius: 0.5rem;
+    width: 20.25rem;
+    height:20.25rem;
+    cursor: pointer;
+}
+hr{
+    width: 50%;
+}
+.accordion{
+    list-style:none;
+    width: 25%;
+    position: absolute;
+    top: 18%;
+    left: 40.8%;
+    margin: -125px 0 0 -125px;
+}
+.accordion:hover{
+    cursor: pointer;
+}
+.accordion_trigger {
+    display: block;
+    background-color: lightgoldenrodyellow;
+    color: black;
+    font-size: large;
+    cursor: pointer;
+    padding: 1.2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 32rem;
+    text-align: left;
+    }
+.accordion_toggle:checked ~ .accordion_trigger {
+    background-color: goldenrod;
+}
+.accordion_toggle {
+    position: absolute;
+    display: none;
+  }
+  .accordion_target {
+    border: 0;
+    clip: rect(0 0 0 0);
+    margin: -0.063px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 0.063px;
+  }
+ .accordion_toggle:checked ~ .accordion_target {
+    position: static;
+    overflow: visible;
+    clip: auto;
+    margin: auto;
+    padding: 1.2rem;
+    width: auto;
+    height: auto;
+    -webkit-animation:fadeIn ease-in 0.5s; 
+    -moz-animation:fadeIn ease-in 0.5s;
+    animation:fadeIn ease-in 0.5s;
+  }
+    @-moz-keyframes fadeIn {
+        from { opacity: 0; }
+    to { opacity: 1 }
+    }
+    @-webkit-keyframes fadeIn {
+        from { opacity: 0; }
+    to { opacity: 1 }
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+    to { opacity: 1 }
+}
+.accordion_trigger:hover ~ .accordion_target{
+    position: static;
+    overflow: visible;
+    clip: auto;
+    margin: auto;
+    font-style: italic;
+    padding: 1.2rem;
+    width: auto;
+    height: auto;
+    -webkit-animation:fadeIn ease-in 0.5s; 
+    -moz-animation:fadeIn ease-in 0.5s;
+    animation:fadeIn ease-in 0.5s;
+  }
+    @-moz-keyframes fadeIn {
+        from { opacity: 0; }
+    to { opacity: 1 }
+    }
+    @-webkit-keyframes fadeIn {
+        from { opacity: 0; }
+    to { opacity: 1 }
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+    to { opacity: 1 }
+}
+.accordion_target:hover{
+    position: static;
+    overflow: visible;
+    clip: auto;
+    margin: auto;
+    padding: 1.2rem;
+    width: auto;
+    height: auto;
+    -webkit-animation:fadeIn ease-in 0.5s; 
+    -moz-animation:fadeIn ease-in 0.5s;
+    animation:fadeIn ease-in 0.5s;
+  }
+    @-moz-keyframes fadeIn {
+        from { opacity: 0; }
+    to { opacity: 1 }
+    }
+    @-webkit-keyframes fadeIn {
+        from { opacity: 0; }
+    to { opacity: 1 }
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+    to { opacity: 1 }
+}
+.icon > i{
+    position: relative;
+    right: -16.2rem;
+    top:-0.8rem;
+    text-shadow: 0 0 0.375rem #000;
+    display: none;
+}
+.accordion:hover .icon i{
+    display: block;
+}
+.accordion:hover .accordion_trigger{
+    color:darkblue;
+}
+.accordion_trigger:hover .icon i{
+    display: block;
+    transform: rotate(45deg);
+}
+.accordion_toggle:checked ~ * .icon > i{
+    transform: rotate(45deg);
+}
+.accordion_trigger:hover ~ * .icon > i{
+    display: block;
+    transform: rotate(45deg);
+}
