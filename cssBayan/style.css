@@ -11,13 +11,18 @@ img{
     cursor: pointer;
 }
 hr{
-    width: 25%;
+    width: 50%;
 }
 .accordion{
     list-style:none;
-    margin: 0;
-  margin-bottom: 1.5rem;
-  padding: 0;
+    width: 25%;
+    position: absolute;
+    top: 18%;
+    left: 40.8%;
+    margin: -125px 0 0 -125px;
+}
+.accordion:hover{
+    cursor: pointer;
 }
 .accordion_trigger {
     display: block;
@@ -123,9 +128,24 @@ hr{
 .icon > i{
     position: relative;
     right: -16.2rem;
-    top:-1rem;
+    top:-0.8rem;
     text-shadow: 0 0 0.375rem #000;
+    display: none;
 }
-.accordion_toggle:has(:checked) ~ .icon > i{
-    transform: rotate(25deg);
+.accordion:hover .icon i{
+    display: block;
+}
+.accordion:hover .accordion_trigger{
+    color:darkblue;
+}
+.accordion_trigger:hover .icon i{
+    display: block;
+    transform: rotate(45deg);
+}
+.accordion_toggle:checked ~ * .icon > i{
+    transform: rotate(45deg);
+}
+.accordion_trigger:hover ~ * .icon > i{
+    display: block;
+    transform: rotate(45deg);
 }
